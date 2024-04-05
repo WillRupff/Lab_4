@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://ciwvtxxejdu7o"]
+
+[ext_resource type="Script" path="res://CharacterBody3D.gd" id="1_kqykm"]
+[ext_resource type="Texture2D" uid="uid://dhq01h3oefs16" path="res://icon.svg" id="2_heogp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gvuon"]
+
+[sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_meu0s"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.762465, 0, -0.647029, 0, 1, 0, 0.647029, 0, 0.762465, -0.87768, 0.82076, 0.845848)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.276745, 0.960944, 0, -0.960944, -0.276745, -1.24932, 0.86556, -0.109914)
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.51776, 0.572071, -1.50351)
+radius = 0.49
+material = SubResource("StandardMaterial3D_gvuon")
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.720761, 1.34834, -2.84925)
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+script = ExtResource("1_kqykm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.705204, -0.0288546, -1.70462)
+shape = SubResource("SeparationRayShape3D_meu0s")
+
+[node name="Sprite3D" type="Sprite3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.950294, 0.0952131, -1.72057)
+texture = ExtResource("2_heogp")
