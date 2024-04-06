@@ -1,10 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://ciwvtxxejdu7o"]
+[gd_scene load_steps=11 format=3 uid="uid://ciwvtxxejdu7o"]
 
 [ext_resource type="Script" path="res://CharacterBody3D.gd" id="1_kqykm"]
 [ext_resource type="Texture2D" uid="uid://cffuof1q1tso6" path="res://6437619.webp" id="2_l2yle"]
 [ext_resource type="Texture2D" uid="uid://5icxvlmdac8y" path="res://3d-render-ramadan-moon-free-png.webp" id="3_8vldg"]
 [ext_resource type="Texture2D" uid="uid://53g5ikx6yrjf" path="res://3d-planet-saturn-rendered-object-illustration-png.png" id="4_cpewe"]
 [ext_resource type="Texture2D" uid="uid://bvnmsmi4o24jn" path="res://3d-planet-illustration-free-png.webp" id="5_jhbwd"]
+[ext_resource type="Texture2D" uid="uid://cx8v3terbxqv5" path="res://planet-4912389-4088993.webp" id="6_yx7cl"]
+[ext_resource type="Texture2D" uid="uid://dye278aws7ew6" path="res://pngtree-cartoon-three-dimensional-3d-planet-planet-outer-space-model-decorative-pattern-png-image_10132301.png" id="7_1rcko"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_d4lpf"]
 
@@ -47,9 +49,18 @@ transform = Transform3D(0.0181616, 0.249339, 0, -0.249339, 0.0181616, 0, 0, 0, 0
 texture = ExtResource("3_8vldg")
 
 [node name="Saturn" type="Sprite3D" parent="."]
-transform = Transform3D(0.273645, 0, -0.122958, 0, 0.3, 0, 0.122958, 0, 0.273645, -1.30212, 2.93322, -6.00869)
+transform = Transform3D(0.273645, 0, -0.122958, 0, 0.3, 0, 0.122958, 0, 0.273645, -1.30212, 4.66485, -6.00869)
 texture = ExtResource("4_cpewe")
 
 [node name="Planet" type="Sprite3D" parent="."]
 transform = Transform3D(0.790935, 0, -0.6119, 0, 1, 0, 0.6119, 0, 0.790935, 4.66366, -0.735629, 0.838232)
+layers = 2
 texture = ExtResource("5_jhbwd")
+
+[node name="Planet2" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.994803, -0.10182, 0, 0.10182, 0.994803, 12.1406, 5.43442, -8.0253)
+texture = ExtResource("6_yx7cl")
+
+[node name="Planet3" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.91765, -1.30036, 0)
+texture = ExtResource("7_1rcko")
